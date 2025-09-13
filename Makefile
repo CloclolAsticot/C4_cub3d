@@ -34,7 +34,7 @@ DEPS	=	$(patsubst $(D_SRCS)/%.c, $(D_OBJS)/%.d, $(SRCS))
 #########################################
 
 .PHONY : all
-all: makelibft $(D_OBJS) $(NAME)
+all: makelibft makemlx $(D_OBJS) $(NAME)
 
 $(D_OBJS)/%.o: $(D_SRCS)/%.c Makefile
 	@mkdir -p $(dir $@)
@@ -44,12 +44,16 @@ $(D_OBJS)/%.o: $(D_SRCS)/%.c Makefile
 $(D_OBJS):
 	mkdir -p $(D_OBJS)
 
-$(NAME): $(OBJS) libft/libft.a
-	$(CC) $(CFLAGS) $(OBJS) libft/libft.a -o $(NAME)
+$(NAME): $(OBJS) libft/libft.a minilibx-linux/libmlx.a
+	$(CC) $(CFLAGS) $(OBJS) libft/libft.a minilibx-linux/libmlx.a -o $(NAME) -lXext -lX11 -lm -lz
 
 .PHONY : makelibft
 makelibft:
 	@$(MAKE) --no-print-directory -C libft/
+
+.PHONY : makemlx
+makemlx:
+	@$(MAKE) --no-print-directory -C minilibx-linux/
 
 .PHONY : clean
 clean:

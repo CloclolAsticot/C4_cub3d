@@ -6,11 +6,11 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 15:46:17 by csavreux          #+#    #+#             */
-/*   Updated: 2025/09/13 15:54:15 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2025/09/13 16:45:08 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "structures.h"
+#include "game_structures.h"
 
 static void	initialize_player_location(t_point *player_position, char **map,
 				size_t map_size_x, size_t map_size_y);
@@ -103,3 +103,30 @@ static void	initialize_player_orientation(t_vector *player_orientation,
 	}
 	return ;
 }
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+// 	t_map_data map_data;
+// 	t_player player;
+// 	char *map[6] = {
+// 		"11111",
+// 		"10001",
+// 		"10001",
+// 		"10N01",
+// 		"10001",
+// 		"11111"
+// 	};
+	
+// 	map_data.map = map;
+// 	map_data.map_size_x = 5;
+// 	map_data.map_size_y = 5;
+
+// 	initialize_player_data(&player, &map_data);
+
+// 	printf("Player position : x=%f, y=%f\n", player.position.x, player.position.y);
+// 	printf("Player orientation : v_x=%f, v_y=%f\n", player.orientation.v_x, player.orientation.v_y);
+
+// 	return (0);
+// }
