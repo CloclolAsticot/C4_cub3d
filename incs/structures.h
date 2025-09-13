@@ -24,12 +24,12 @@ typedef struct s_player
 typedef struct s_line
 {
 
-}
+}   t_line;
 
 typedef struct s_map
 {
 
-}
+}   t_map;
 
 
 #endif
