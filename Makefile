@@ -6,7 +6,7 @@ NAME = cub3D
 
 # Compilation
 CC = cc
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -g
 DEPFLAGS = -MMD -MP
 
 # Directories
@@ -15,7 +15,8 @@ D_INCS = incs
 D_OBJS = objs
 
 # Source Files
-FILES 	= 	initialize_player.c
+FILES 	= 	main.c \
+			initialize_player.c
 
 SRCS 	= 		$(addprefix $(D_SRCS)/, $(FILES))
 

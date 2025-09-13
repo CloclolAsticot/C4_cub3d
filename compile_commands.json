@@ -1,0 +1,24 @@
+[
+ {
+  "directory": "/home/csavreux/Documents/42_projects/github_folders/C4_cub3d",
+  "arguments": [
+   "cc",
+   "-Wall",
+   "-Wextra",
+   "-Werror",
+   "-MMD",
+   "-MP",
+   "-I",
+   "libft/incs",
+   "-I",
+   "minilibx-linux/",
+   "-I",
+   "./incs",
+   "-c",
+   "srcs/initialize_player.c",
+   "-o",
+   "objs/initialize_player.o"
+  ],
+  "file": "srcs/initialize_player.c"
+ }
+]
