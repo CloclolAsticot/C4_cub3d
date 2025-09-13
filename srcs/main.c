@@ -6,7 +6,7 @@
 /*   By: csavreux <csavreux@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/13 15:55:59 by csavreux          #+#    #+#             */
-/*   Updated: 2025/09/13 16:15:39 by csavreux         ###   ########lyon.fr   */
+/*   Updated: 2025/09/13 16:18:09 by csavreux         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@ int main(void)
 {
 	t_map_data map_data;
 	t_player player;
-	char *map[5] = {
+	char *map[6] = {
 		"11111",
 		"10001",
 		"10001",
-		"10E01",
+		"10N01",
+		"10001",
 		"11111"
 	};
 	
